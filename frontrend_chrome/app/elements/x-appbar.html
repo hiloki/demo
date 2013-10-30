@@ -1,0 +1,47 @@
+<polymer-element name="x-appbar"  attributes="heading">
+<template>
+<style>
+@host { 
+  :scope {
+    display: block;
+  }
+}
+.appbar {
+  display: flex;
+  line-height: 36px;
+  height: 36px;
+}
+.appbar-title {
+  flex: 2 0 232px;
+  order: 2;
+  margin: 0;
+  font-size: 16px;
+}
+.appbar-left {
+  flex: 1 0 44px;
+  order: 1;
+}
+.appbar-right {
+  flex: 1 0 44px;
+  order: 3;
+}
+</style>
+
+<div class="appbar">
+	<h1 class="appbar-title">{{ heading }}</h1>
+	<content select=".appbar-left"></content>
+	<content select=".appbar-right"></content>
+</div>
+
+</template>
+<script>
+Polymer('x-appbar', {
+  //applyAuthorStyles: true,
+  //resetStyleInheritance: true,
+  created: function() { },
+  enteredView: function() { },
+  leftView: function() { },
+  attributeChanged: function(attrName, oldVal, newVal) { }
+});
+</script>
+</polymer-element>

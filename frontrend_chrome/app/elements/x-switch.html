@@ -1,0 +1,61 @@
+<polymer-element name="x-switch" attributes="">
+<template>
+<style>
+/*
+Ios 7 Checkbox & radio
+By Ugo Quaisse
+http://www.smartvisite.com
+*/
+@host { 
+  :scope {
+    display: inline-block;
+    zoom: 2;
+  }
+}
+input[type=checkbox] {
+  -webkit-appearance: none;
+  box-shadow: inset 0px 0px 0px 1px #e6e6e6;
+  border-radius: 15px;
+  background-color: #fff;
+  padding: 1px;
+  display: inline-block;
+  width: 52px;
+  height: 31px;
+  position: relative;
+  cursor: pointer;
+  transition: all .3s ease-out;
+  margin: 0px;
+  transform: scale(1);
+  outline: none;
+}
+input[type=checkbox]:checked {
+  box-shadow: inset 0px 0px 0px 20px #53d76a;
+}
+input[type=checkbox]:after {
+  content: '';
+  position: absolute;
+  width: 29px;
+  height: 29px;
+  border-radius: 15px;
+  box-shadow: 0px 2px 2px 1px rgba(0,0,0,.2);
+  cursor: pointer;
+  background-color: #fff;
+  transition: all 0.1s ease-in .1s;
+}
+input[type="checkbox"]:checked:after {
+  left: 22px;
+}
+</style>
+<input type="checkbox" />
+</template>
+<script>
+Polymer('x-switch', {
+  //applyAuthorStyles: true,
+  //resetStyleInheritance: true,
+  created: function() { },
+  enteredView: function() { },
+  leftView: function() { },
+  attributeChanged: function(attrName, oldVal, newVal) { }
+});
+</script>
+</polymer-element>

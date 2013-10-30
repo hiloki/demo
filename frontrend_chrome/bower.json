@@ -1,0 +1,10 @@
+{
+  "name": "demo",
+  "version": "0.0.0",
+  "dependencies": {
+    "modernizr": "~2.6.2",
+    "polymer": "latest",
+    "normalize-css": "~2.1.3"
+  },
+  "devDependencies": {}
+}

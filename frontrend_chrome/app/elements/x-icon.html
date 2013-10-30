@@ -1,0 +1,26 @@
+<polymer-element name="x-icon" attributes="type attr">
+<link rel="stylesheet" href="/styles/font-awesome.min.css">
+<template>
+<style>
+@host { 
+  :scope {
+    display: inline-block;
+  }
+}
+</style>
+
+<i class="fa {{type}} {{attr}}"></i>
+
+</template>
+<script>
+Polymer('x-icon', {
+  //applyAuthorStyles: true,
+  //resetStyleInheritance: true,
+  attr: "",
+  created: function() { },
+  enteredView: function() { },
+  leftView: function() { },
+  attributeChanged: function(attrName, oldVal, newVal) { }
+});
+</script>
+</polymer-element>

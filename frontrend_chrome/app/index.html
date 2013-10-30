@@ -1,0 +1,100 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Try Web Components</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Share+Tech">
+<link rel="stylesheet" href="styles/main.css">
+<!-- build:js scripts/vendor/modernizr.js -->
+<script src="bower_components/modernizr/modernizr.js"></script>
+<!-- endbuild -->
+
+<!-- Place your HTML imports here -->
+<link rel="import" href="elements/x-tabs.html">
+<link rel="import" href="elements/x-icon.html">
+<link rel="import" href="elements/x-pictures.html">
+<link rel="import" href="elements/x-media.html">
+<link rel="import" href="elements/x-speech.html">
+<link rel="import" href="elements/x-appbar.html">
+<link rel="import" href="elements/x-button.html">
+<link rel="import" href="elements/x-like.html">
+</head>
+<body>
+
+<h1 class="title">Timeline</h1>
+
+<div class="viewport stage">
+
+<x-appbar heading="Feed" class="the-header">
+	<a href="./home" class="appbar-left">
+		<x-icon type="fa-list" attr="fa-lg"></x-icon>
+	</a>
+	<a href="./gear" class="appbar-right">
+		<x-icon type="fa-gear" attr="fa-lg"></x-icon>
+	</a>
+</x-appbar>
+
+<x-tabs class="the-tabs">
+	<div>
+		<x-icon type="fa-pencil" attr="fa-lg"></x-icon> Status
+	</div>
+	<div>
+		<x-icon type="fa-camera" attr="fa-lg"></x-icon> Photo
+	</div>
+	<div>
+		<x-icon type="fa-map-marker" attr="fa-lg"></x-icon> Check-in
+	</div>
+</x-tabs>
+
+<div class="the-article">
+	<x-media src="/images/hiloki.jpg" width="50" height="50" class="author">
+		<p class="author-name">Hiroki Tani</p>
+		<p><x-icon type="fa-map-marker" attr="fa-lg"></x-icon> Nagiso, Nagano</p>
+	</x-media>
+	<x-pictures class="picture">
+		<img src="/images/kiso.jpg">
+	</x-pictures>
+	<div class="the-article-text">
+		<p>妻籠宿にて。</p>
+	</div>
+	<div class="the-article-feedback">
+		<x-like class="the-article-feedback-like"></x-like>
+		<div class="the-article-feedback-comment">
+			<x-icon type="fa-comments" attr="fa-lg"></x-icon> コメントをみる
+		</div>
+	</div>
+	<div class="the-article-comments">
+		<x-media src="/images/t32k-s.jpg" width="36" height="36" class="comment">
+			<p class="comment-name">Koji Ishimoto</p>
+			<p>いいね！</p>
+		</x-media>
+		<x-media src="/images/1000ch-s.jpg" width="36" height="36" class="comment">
+			<p class="comment-name">Koji Ishimoto</p>
+			<p>いいね！!</p>
+		</x-media>
+		<x-media src="/images/hiloki-s.jpg" width="36" height="36" class="comment" reverse>
+			<p class="comment-name">Koji Ishimoto</p>
+			<p>ええやろ！!</p>
+		</x-media>
+	</div>
+</div>
+
+</div>
+
+<script>
+document.addEventListener('WebComponentsReady', function() {
+    // Perform some behaviour
+});
+</script>
+
+<!-- build:js scripts/vendor.js -->
+<script src="bower_components/polymer/polymer.min.js"></script>
+<!-- endbuild -->
+</body>
+</html>
