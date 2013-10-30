@@ -1,0 +1,35 @@
+<polymer-element name="x-tabs"  attributes="">
+<template>
+<style>
+@host { 
+  :scope {
+    display: block;
+  }
+}
+.tabs {
+  display: flex;
+}
+.tabs > * {
+  flex: 1;
+  text-align: center;
+  height: 44px;
+  line-height: 44px;
+}
+</style>
+
+<div class="tabs">
+  <content></content>
+</div>
+
+</template>
+<script>
+Polymer('x-tabs', {
+  //applyAuthorStyles: true,
+  //resetStyleInheritance: true,
+  created: function() { },
+  enteredView: function() { },
+  leftView: function() { },
+  attributeChanged: function(attrName, oldVal, newVal) { }
+});
+</script>
+</polymer-element>

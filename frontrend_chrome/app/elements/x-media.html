@@ -1,0 +1,44 @@
+<polymer-element name="x-media"  attributes="src width height reverse">
+<template>
+<style>
+@host { 
+  :scope {
+    display: block;
+  }
+}
+.media {
+  display: flex;
+  align-items: center;
+}
+
+.media-figure {
+  order: 1;
+  margin-right: 1em;
+}
+
+.media-body {
+  flex: 1;
+  order: 2;
+  text-align: left;
+}
+</style>
+
+<div class="media">
+	<img src="{{src}}" width="{{width}}" height="{{height}}" class="media-figure">
+	<div class="media-body">
+		<content ></content>
+	</div>
+</div>
+
+</template>
+<script>
+Polymer('x-media', {
+  //applyAuthorStyles: true,
+  //resetStyleInheritance: true,
+  created: function() { },
+  enteredView: function() { },
+  leftView: function() { },
+  attributeChanged: function(attrName, oldVal, newVal) { }
+});
+</script>
+</polymer-element>

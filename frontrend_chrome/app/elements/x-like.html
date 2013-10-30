@@ -1,0 +1,33 @@
+<link rel="import" href="x-icon.html">
+<polymer-element name="x-like" attributes="type count">
+<template>
+<style>
+@host { 
+  :scope {
+    display: inline-block;
+    color: #3498db;
+  }
+}
+</style>
+
+<x-icon type="{{type}}" attr="fa-lg" on-click="{{countup}}"></x-icon> <span>{{count}}</span>
+
+</template>
+<script>
+Polymer('x-like', {
+  //applyAuthorStyles: true,
+  //resetStyleInheritance: true,
+  type: "fa-thumbs-o-up",
+  count: "",
+  countup: function() {
+      this.count++;
+      this.type = "fa-thumbs-up";
+      console.log(this.type);
+  },
+  created: function() { },
+  enteredView: function() { },
+  leftView: function() { },
+  attributeChanged: function(attrName, oldVal, newVal) { }
+});
+</script>
+</polymer-element>
